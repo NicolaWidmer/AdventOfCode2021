@@ -1,15 +1,9 @@
-f=open("/Users/Nicola/git/AdventOfCode2018/files/in1.txt","r")
+f=open("/Users/Nicola/git/AdventOfCode2021/files/in1.txt","r")
 ans=0
-set=set()
-change=[]
+m=[]
 for line in f:
-    change.append(int(line))
-found=False
-while not found:
-    for i in change:
-        if ans in set:
-            print(ans)
-            found=True
-        else:
-            set.add(ans)
-        ans+= i
+    m.append(int(line))
+for i in range(len(m)-3):
+    if(m[i]<m[i+3]):
+        ans+=1
+print(ans)
