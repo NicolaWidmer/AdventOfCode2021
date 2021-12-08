@@ -29,6 +29,7 @@ for enc,res in nums:
            dicts[0]=e
         else:
            dicts[6]=e
+
     for e in [e for e in enc if len(e)==5]:
         if cont(e,dicts[1]):
             dicts[3]=e
@@ -36,6 +37,7 @@ for enc,res in nums:
             dicts[5]=e
         else:
            dicts[2]=e
+
     curans=0
     for r in res:
         curans*=10
