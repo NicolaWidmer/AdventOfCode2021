@@ -21,16 +21,18 @@ for enc,res in nums:
             dicts[4]=e
         if len(e)==7:
             dicts[8]=e
-    dicts[9]=[e for e in enc if (len(e)==6 and cont(e,dicts[4]))][0]
-    for e in [e for e in enc if len(e)==6 and e!=dicts[9]]:
-        if(cont(e,dicts[1])):
+
+    for e in [e for e in enc if len(e)==6]:
+        if cont(e,dicts[4]):
+            dicts[9]=e
+        elif cont(e,dicts[1]):
            dicts[0]=e
         else:
            dicts[6]=e
     for e in [e for e in enc if len(e)==5]:
-        if(cont(e,dicts[1])):
+        if cont(e,dicts[1]):
             dicts[3]=e
-        elif (cont(dicts[9],e)):
+        elif cont(dicts[9],e):
             dicts[5]=e
         else:
            dicts[2]=e
