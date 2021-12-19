@@ -57,8 +57,7 @@ def explode(x,d):
             return (False,0,0,y)
 
 f=open("files/day18.txt","r")
-lines=f.read().splitlines()
-lines=list(map(json.loads,lines))
+lines=list(map(json.loads,f.read().splitlines()))
 
 x=lines[0]
 for nxt in lines[1:]:
